@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>SEO Web &amp; Video | Digital Marketing Agency</title>
+  <meta name="description" content="Full-service SEO, web design, and video marketing agency. We drive traffic, leads, and revenue."/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--blue:#0a2463;--cyan:#3e92cc;--cyan2:#56cfe1;--light:#f0f4ff;--text:#0d1b2a;--muted:#4a6080;--dark:#060e1c}
+    html{scroll-behavior:smooth}
+    body{font-family:"Segoe UI",system-ui,sans-serif;background:#fff;color:var(--text);line-height:1.7}
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(6,14,28,.95);backdrop-filter:blur(10px);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:1.2rem;color:var(--cyan2);font-weight:800;text-decoration:none;letter-spacing:.5px}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{color:#c8d8f0;text-decoration:none;font-size:.9rem;transition:color .3s}
+    .nav-links a:hover{color:var(--cyan2)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+    .hamburger span{display:block;width:25px;height:2px;background:#c8d8f0}
+    .hero{min-height:100vh;background:linear-gradient(135deg,var(--dark) 0%,var(--blue) 60%,#0d2d5e 100%);display:flex;align-items:center;padding:6rem 2rem 4rem}
+    .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .hero-text h1{font-size:clamp(2rem,5vw,3.5rem);color:#fff;font-weight:800;line-height:1.15;margin-bottom:1rem}
+    .hero-text h1 span{color:var(--cyan2)}
+    .hero-text p{color:rgba(200,216,240,.85);font-size:1.05rem;margin-bottom:2rem;max-width:480px}
+    .hero-stats{display:flex;gap:2rem;flex-wrap:wrap}
+    .stat strong{display:block;font-size:2rem;color:var(--cyan2);font-weight:800}
+    .stat span{color:rgba(200,216,240,.7);font-size:.85rem}
+    .hero-visual{text-align:center;font-size:8rem;opacity:.15}
+    .btn{display:inline-block;padding:.9rem 2rem;background:var(--cyan2);color:var(--dark);text-decoration:none;font-weight:700;border-radius:4px;font-size:.95rem;transition:all .3s;margin-right:.75rem}
+    .btn:hover{background:#fff;transform:translateY(-2px)}
+    .btn-outline{background:transparent;border:2px solid var(--cyan2);color:var(--cyan2)}
+    .btn-outline:hover{background:var(--cyan2);color:var(--dark)}
+    section{padding:5rem 2rem}
+    .container{max-width:1100px;margin:0 auto}
+    .section-tag{text-align:center;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;font-size:.8rem;font-weight:700;margin-bottom:.75rem}
+    .section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:1rem}
+    .section-sub{text-align:center;max-width:580px;margin:0 auto 3rem;color:var(--muted)}
+    .services{background:var(--light)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+    .card{background:#fff;padding:2rem;border-radius:10px;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:transform .3s;border-left:4px solid var(--cyan)}
+    .card:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(10,36,99,.1)}
+    .card-icon{font-size:2.2rem;margin-bottom:.75rem}
+    .card h3{font-size:1.1rem;color:var(--blue);margin-bottom:.5rem;font-weight:700}
+    .card p{color:var(--muted);font-size:.9rem}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+    .step{text-align:center;padding:1.5rem}
+    .step-num{width:50px;height:50px;border-radius:50%;background:var(--blue);color:#fff;font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+    .step h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--blue)}
+    .step p{font-size:.9rem;color:var(--muted)}
+    .cta-sec{background:var(--blue);text-align:center;padding:5rem 2rem}
+    .cta-sec h2{color:#fff;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:1rem}
+    .cta-sec p{color:rgba(200,216,240,.8);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-form{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+    .cta-form input{flex:1;min-width:220px;padding:.85rem 1rem;border:1px solid rgba(86,207,225,.3);background:rgba(255,255,255,.08);color:#fff;border-radius:4px;font-size:.95rem}
+    .cta-form button{padding:.85rem 1.8rem;background:var(--cyan2);border:none;color:var(--dark);cursor:pointer;font-weight:700;border-radius:4px;font-size:.95rem}
+    footer{background:var(--dark);color:rgba(200,216,240,.4);text-align:center;padding:1.5rem;font-size:.85rem}
+    footer a{color:var(--cyan2);text-decoration:none}
+    @media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--dark);padding:1.5rem 2rem;gap:1.5rem}.nav-links.open{display:flex}.hamburger{display:flex}.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
+  </style>
+</head>
+<body>
+<script>function toggleNav(){document.getElementById("navLinks").classList.toggle("open")}</script>
+<nav>
+  <a href="#" class="logo">SEO Web &amp; Video</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-text">
+    <h1>Rank Higher.<br/>Convert More.<br/><span>Grow Faster.</span></h1>
+    <p>Full-service SEO, web design, and video marketing that delivers measurable results for ambitious businesses.</p>
+    <div style="margin-bottom:2rem"><a href="#services" class="btn">Our Services</a><a href="#contact" class="btn btn-outline">Free Audit</a></div>
+    <div class="hero-stats"><div class="stat"><strong>500+</strong><span>Clients Served</span></div><div class="stat"><strong>3.2x</strong><span>Avg. Traffic Growth</span></div><div class="stat"><strong>97%</strong><span>Client Retention</span></div></div>
+  </div><div class="hero-visual">&#128269;</div></div></section>
+<section class="services" id="services"><div class="container">
+  <p class="section-tag">What We Do</p><h2 class="section-title">Digital Marketing That Performs</h2>
+  <p class="section-sub">Integrated strategies combining SEO, stunning web design, and compelling video to dominate your market.</p>
+  <div class="cards">
+    <div class="card"><div class="card-icon">&#128269;</div><h3>SEO &amp; Content</h3><p>Technical SEO, keyword strategy, and content marketing that drives qualified organic traffic.</p></div>
+    <div class="card"><div class="card-icon">&#128421;</div><h3>Web Design &amp; Dev</h3><p>Conversion-optimized websites built for speed, UX, and search visibility. Mobile-first, always.</p></div>
+    <div class="card"><div class="card-icon">&#127916;</div><h3>Video Marketing</h3><p>Brand films, explainer videos, social reels, and YouTube SEO that capture attention and build trust.</p></div>
+    <div class="card"><div class="card-icon">&#128202;</div><h3>Paid Advertising</h3><p>Google Ads, Meta campaigns, and retargeting strategies engineered for maximum ROI.</p></div>
+  </div></div></section>
+<section id="process"><div class="container">
+  <p class="section-tag">Our Process</p><h2 class="section-title">From Audit to Results in 90 Days</h2>
+  <p class="section-sub">A proven 4-step framework that turns digital potential into measurable business growth.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><h3>Audit &amp; Research</h3><p>Deep competitor and keyword analysis to uncover your biggest growth opportunities.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Strategy &amp; Plan</h3><p>Custom roadmap aligned with your goals, timeline, and budget for maximum impact.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>Execute &amp; Optimize</h3><p>Rapid deployment with continuous A/B testing and data-driven refinement.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>Report &amp; Scale</h3><p>Transparent monthly reporting and strategic scaling of what works best.</p></div>
+  </div></div></section>
+<section class="cta-sec" id="contact">
+  <h2>Ready to Grow Your Business?</h2>
+  <p>Get a free SEO audit and digital marketing strategy session. No obligation, no fluff.</p>
+  <form class="cta-form" onsubmit="return false;"><input type="email" placeholder="Your business email"/><button type="submit">Get Free Audit</button></form>
+</section>
+<footer><p>&copy; 2025 <a href="https://seowebandvideo.com">SEOWebAndVideo.com</a> &middot; All Rights Reserved</p></footer>
+</body>
+</html>
